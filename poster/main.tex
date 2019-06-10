@@ -74,9 +74,13 @@ Furthermore, by omitting all the feedback loops, we show that while hierarchical
 The Kuramoto model~\cite{kuramoto2003chemical} consists of a collection of $N$ coupled phase oscillators, $\theta_i$, having natural frequencies $\omega_i$  distributed
 with a given probability density and its time evolution is given by:
 \begin{align*}
-&\dot{\theta}_i=\omega_i+\frac{\kappa}{N} \displaystyle {\sum_{j=1}^{N} a_{ij} G(\theta_i,\theta_j) ,}\\
-& G(\theta_i,\theta_j)= u\sin(\theta_j-\theta_i)+(1-u)\frac{(1-cos(\theta_j-\theta_i))}{2}
+&\dot{\theta}_i=\omega_i+\frac{\kappa}{N} \sum_{j=1}^{N} a_{ij} \Big[ u\sin(\theta_j-\theta_i)\\
+	&\hspace{1.15cm}+(1-u)\frac{(1-cos(\theta_j-\theta_i))}{2} \Big],
 \end{align*}
+%\begin{align*}
+%&\dot{\theta}_i=\omega_i+\frac{\kappa}{N} \displaystyle {\sum_{j=1}^{N} a_{ij} G(\theta_i,\theta_j) ,}\\
+%& G(\theta_i,\theta_j)= u\sin(\theta_j-\theta_i)+(1-u)\frac{(1-cos(\theta_j-\theta_i))}{2}
+%\end{align*}
 where $\kappa$ shows the overall coupling strength. 
 To quantify the degree of synchrony, the phase order parameter is defined as $r(t)= {1\over N} {\langle | \sum_{i=1}^{N} \mathrm{e}^{i\theta_{i}(t)}| \rangle}$,  where $0\leq r\leq{1}$ measures the phase coherence of oscillators. The value $r=1$ shows the fully synchronized state, while $r=0$ indicates the incoherent solution. Here, $\langle\dots\rangle$ indicates averaging over different network realizations and initial conditions. The time average of $r$ after achieving a steady state is represented  by $R$. In our simulations, the initial values of $\theta_i$ are randomly drawn from a uniform distribution in interval $[0, 2\pi]$, and natural frequencies are identical.
 }
